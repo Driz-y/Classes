@@ -87,3 +87,27 @@ console.log("Class 10 Onsite");
 // for (let i = 0; i < car.length; i++) {
 // 	console.log(car[i].modelYear);
 // }
+type carType = {
+	model: string;
+	isUsed: Boolean;
+	color: string;
+	brand: string;
+	modelYear: number;
+};
+
+let car: carType[] = [
+	{
+		model: "city",
+		brand: "honda",
+		isUsed: false,
+		modelYear: 1992,
+		color: "white",
+	},
+	{
+		model: "7 Series",
+		brand: "BMW",
+		isUsed: false,
+		modelYear: 2023,
+		color: "Black",
+	},
+];
