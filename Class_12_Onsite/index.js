@@ -1,35 +1,57 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const inquirer_1 = __importDefault(require("inquirer"));
-async function userInput() {
-    {
-        const result = await inquirer_1.default.prompt([
-            {
-                type: "input",
-                name: "name",
-                message: "enter your name",
-            },
-            {
-                type: "input",
-                name: "age",
-                message: "enter your age",
-            },
-        ]);
-        console.log("result", result);
+import inquirer from "inquirer";
+try {
+    const answer = await inquirer.prompt([
+        {
+            type: "number",
+            name: "Score",
+            message: "Enter Your Marks Between 0 to 100",
+        },
+    ]);
+    if (answer.Score > 100 || answer.Score < 0) {
+        console.log("enter a valid number");
     }
+    else
+        answer.Score < 100 || answer.Score < 0;
+    console.log("you are pass");
 }
-userInput();
-console.log("after input");
-// console.log("before pdf create");
-// async function createPdf() {
-// 	await // logic pdf create 2min
-// 	console.log("pdf file is created");
+catch (error) {
+    console.log("error", error);
+}
+// async function userInput() {
+// 	{
+// 		const result: QuestionAnswer = await inquirer.prompt([
+// 			{
+// 				type: "input",
+// 				name: "Name",
+// 				message: "enter your name",
+// 			},
+// 			{
+// 				type: "input",
+// 				name: "Age",
+// 				message: "enter your age",
+// 			},
+// 			{
+// 				type: "input",
+// 				name: "City",
+// 				message: "enter your city",
+// 			},
+// 			{
+// 				type: "Number",
+// 				name: "RollNumber",
+// 				message: "enter your RollNumber",
+// 			},
+// 		]);
+// 		console.log("result", result);
+// 	}
 // }
-// createPdf();
-// console.log("after pdf created");
-// const createwordFile = () => {};
-// createwordFile();
-// console.log("create word file");
+// userInput();
+// // console.log("before pdf create");
+// // async function createPdf() {
+// // 	await // logic pdf create 2min
+// // 	console.log("pdf file is created");
+// // }
+// // createPdf();
+// // console.log("after pdf created");
+// // const createwordFile = () => {};
+// // createwordFile();
+// // console.log("create word file");

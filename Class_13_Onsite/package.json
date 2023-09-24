@@ -1,0 +1,11 @@
+{
+  "name": "class_13_onsite",
+  "version": "1.0.0",
+  "description": "Class 13 ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Emmad Ahmad",
+  "license": "ISC"
+}

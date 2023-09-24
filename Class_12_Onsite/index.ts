@@ -1,37 +1,66 @@
-import inquirer from "inquirer";
+import inquirer, {
+	Answers,
+	QuestionAnswer,
+	QuestionCollection,
+} from "inquirer";
 
-async function userInput() {
-	{
-		const result = await inquirer.prompt([
-			{
-				type: "input",
-				name: "name",
-				message: "enter your name",
-			},
-			{
-				type: "input",
-				name: "age",
-				message: "enter your age",
-			},
-		]);
-		console.log("result", result);
-	}
+try {
+	const answer: Answers = await inquirer.prompt([
+		{
+			type: "number",
+			name: "Score",
+			message: "Enter Your Marks Between 0 to 100",
+		},
+	]);
+	if (answer.Score > 100 || answer.Score < 0) {
+		console.log("enter a valid number");
+	} else answer.Score < 100 || answer.Score < 0;
+	console.log("you are pass");
+} catch (error) {
+	console.log("error", error);
 }
-userInput();
-console.log("after input");
 
-// console.log("before pdf create");
-
-// async function createPdf() {
-// 	await // logic pdf create 2min
-
-// 	console.log("pdf file is created");
+// async function userInput() {
+// 	{
+// 		const result: QuestionAnswer = await inquirer.prompt([
+// 			{
+// 				type: "input",
+// 				name: "Name",
+// 				message: "enter your name",
+// 			},
+// 			{
+// 				type: "input",
+// 				name: "Age",
+// 				message: "enter your age",
+// 			},
+// 			{
+// 				type: "input",
+// 				name: "City",
+// 				message: "enter your city",
+// 			},
+// 			{
+// 				type: "Number",
+// 				name: "RollNumber",
+// 				message: "enter your RollNumber",
+// 			},
+// 		]);
+// 		console.log("result", result);
+// 	}
 // }
+// userInput();
 
-// createPdf();
-// console.log("after pdf created");
+// // console.log("before pdf create");
 
-// const createwordFile = () => {};
+// // async function createPdf() {
+// // 	await // logic pdf create 2min
 
-// createwordFile();
-// console.log("create word file");
+// // 	console.log("pdf file is created");
+// // }
+
+// // createPdf();
+// // console.log("after pdf created");
+
+// // const createwordFile = () => {};
+
+// // createwordFile();
+// // console.log("create word file");
