@@ -130,7 +130,7 @@ let newTodo: Todos = {
 	completed: true,
 	userId: 26,
 };
-console.log(newTodo.todo);
+console.log(newTodo);
 
 let newResponse: TodosResponse = {
 	todos: [newTodo],
@@ -139,7 +139,7 @@ let newResponse: TodosResponse = {
 	limit: 1,
 };
 
-console.log(newResponse.total);
+console.log(newResponse);
 
 //*
 
@@ -169,4 +169,4 @@ let pData: productData = {
 	limit: 30,
 };
 
-console.log(pData.total);
+console.log(pData);
